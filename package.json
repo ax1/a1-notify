@@ -24,5 +24,7 @@
     "url": "https://github.com/ax1/a1-notify/issues"
   },
   "homepage": "https://github.com/ax1/a1-notify#readme",
-  "dependencies": {}
+  "dependencies": {
+    "a1-beep": "^1.0.0"
+  }
 }
