@@ -1,0 +1,28 @@
+{
+  "name": "a1-notify",
+  "version": "1.0.0",
+  "description": "Utils for notification events (sms, email, local beep...). Useful to send alarms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ax1/a1-notify.git"
+  },
+  "keywords": [
+    "notify",
+    "alarm",
+    "sms",
+    "email",
+    "beep",
+    "alert"
+  ],
+  "author": "ax1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ax1/a1-notify/issues"
+  },
+  "homepage": "https://github.com/ax1/a1-notify#readme",
+  "dependencies": {}
+}
