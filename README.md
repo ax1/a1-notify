@@ -4,5 +4,17 @@ Use different techniques to notify an event (alarm, trigger)
 
 Available methods: beep, email, web push notification.
 
-methods:
+## Usage
+
+> Typescript is also available
+
+```javascript
+const notify = require('a1-notify')
+notify.beep()
+```
+
+## API
+
 - **beep()**: Beep sound in the current computer
+- **async rest(url, message)**: Send a web push notification
+- **async push(message)**: Send a web push notification

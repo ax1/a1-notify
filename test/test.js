@@ -1,6 +1,6 @@
 const notify = require('../index')
 
 notify.beep()
-notify.email()
-notify.push()
-notify.rest()
+notify.push('eeepa')
+// notify.email()
+// notify.rest()

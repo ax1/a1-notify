@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ax1/a1-notify#readme",
   "dependencies": {
-    "a1-beep": "^1.0.0"
+    "a1-beep": "^1.0.0",
+    "node-fetch": "^2.6.0"
   }
 }
