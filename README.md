@@ -8,6 +8,8 @@ Available methods: beep, email, web push notification.
 
 > Typescript is also available
 
+No configuration required.
+
 ```javascript
 const notify = require('a1-notify')
 notify.beep()

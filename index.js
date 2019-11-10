@@ -1,5 +1,3 @@
-
-
 module.exports = { beep, rest, push }
 
 /**
@@ -13,8 +11,9 @@ function beep() {
  * Send generic REST message
  * @param {string} url
  * @param {string} message 
+ * @param {string} token?
  */
-async function rest(url, message) {
+async function rest(url, message, token) {
   const payload = { title: 'a1-notify', message }
   await require('node-fetch')(url, { method: 'post', body: JSON.stringify(payload) })
 }
@@ -22,7 +21,15 @@ async function rest(url, message) {
 /**
  * Send a web push notification
  * @param {string} message 
+ * @param {string} token?
  */
-async function push(message) {
-  await rest('https://rcc.esilab.org/a1-pwa/notify', message)
+async function push(message, token) {
+  await rest('https://rcc.esilab.org/a1-pwa/notify', message, token)
+}
+
+/**
+ * Send plain text email
+ */
+async function email() {
+  //TODO see RTX project for email example
 }
