@@ -18,5 +18,5 @@ notify.beep()
 ## API
 
 - **beep()**: Beep sound in the current computer
-- **async rest(url, message)**: Send a web push notification
+- **async rest(url, message)**: Send an HTTP POST message
 - **async push(message)**: Send a web push notification
