@@ -1,6 +1,6 @@
 const notify = require('../index')
 
 notify.beep()
-notify.push('eeepa')
+notify.push('https://rcc.esilab.org/a1-pwa/notify', 'eeepa')
 // notify.email()
 // notify.rest()
