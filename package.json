@@ -1,6 +1,6 @@
 {
   "name": "a1-notify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utils for notification events (sms, email, local beep...). Useful to send alarms.",
   "main": "index.js",
   "scripts": {
