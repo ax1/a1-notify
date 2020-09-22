@@ -16,7 +16,8 @@ function beep() {
  */
 async function rest(url, message, token) {
   const payload = { title: 'a1-notify', message }
-  await require('node-fetch')(url, { method: 'post', body: JSON.stringify(payload) })
+  const res = await require('node-fetch')(url, { method: 'post', body: JSON.stringify(payload) })
+  if (!res.ok) throw res
 }
 
 
