@@ -1,8 +1,20 @@
 # a1-notify
 
-Use different techniques to notify an event (alarm, trigger)
+Use different techniques to notify an event (alarm, trigger).
 
 Available methods: beep, email, web push notification.
+
+## Email special case
+
+Tested from gmail to gmail and to outlook.
+
+https://nodemailer.com/about/
+
+https://support.google.com/accounts/answer/185833?hl=en
+
+Steps:
+- enable 2fa in the account
+- create an app password
 
 ## Usage
 
