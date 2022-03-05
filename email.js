@@ -7,9 +7,9 @@ const { createTransport } = require('nodemailer')
 
 /**
  * Important: Apparently, for outlook to receive emails, both text and html parameters must be sent
- * @param {*} to 
- * @param {*} subject 
- * @param {*} body 
+ * @param {String} to 
+ * @param {String} subject 
+ * @param {String|HTML} body 
  */
 async function send(to, subject, body) {
   const user = process.env.EMAIL_USER
