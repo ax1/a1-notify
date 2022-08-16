@@ -1,4 +1,4 @@
-module.exports = { beep, rest, push, email }
+module.exports = { beep, rest, push, email, sms }
 
 /**
  * Beep sound in the current computer
@@ -39,4 +39,15 @@ async function push(url, message, token) {
  */
 async function email(to, subject, text) {
   await require('./email').send(to, subject, text)
+}
+
+/**
+ * Send SMS. 
+ * If arbitrary phone number, please deactivate sandboxing in the AWS console (SMS).
+ * @param {string} phone      The number with extension. Eg: +34857698985 
+ * @param {string} message    Max 140 characters
+ */
+async function sms(phone, msg) {
+  const aws = await import('../repo/aws.js')
+  await aws.sns.sms(phone, msg)
 }
