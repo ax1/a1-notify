@@ -23,7 +23,7 @@ Steps:
 No configuration required.
 
 ```javascript
-import * as notify from 'a1-notifiy
+import * as notify from 'a1-notify'
 notify.beep()
 ```
 
