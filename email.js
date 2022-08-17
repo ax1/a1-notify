@@ -1,9 +1,8 @@
 /**
  * How to use nodemailer with gmail: see README file
  */
-module.exports = { send }
 
-const { createTransport } = require('nodemailer')
+import { createTransport } from 'nodemailer'
 
 /**
  * Important: Apparently, for outlook to receive emails, both text and html parameters must be sent
@@ -11,7 +10,7 @@ const { createTransport } = require('nodemailer')
  * @param {String} subject 
  * @param {String|HTML} body 
  */
-async function send(to, subject, body) {
+export async function send(to, subject, body) {
   const user = process.env.EMAIL_USER
   const pass = process.env.EMAIL_APP_PW
   if (!user && !pass) throw Error('Add EMAIL_USER and EMAIL_APP_PW env variables before sending email')

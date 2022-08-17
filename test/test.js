@@ -1,4 +1,4 @@
-const notify = require('../index')
+import * as notify from '../index.js'
 
 notify.beep()
 notify.push('https://rcc.esilab.org/pwa/notify', 'eeepa')
