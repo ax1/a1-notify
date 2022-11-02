@@ -1,7 +1,6 @@
 import * as a1_beep from 'a1-beep'
 import fetch from 'node-fetch'
 import { send } from './email.js'
-import { sns } from '/repo/aws.js'
 import { execFile as execFileCallback } from 'child_process'
 import { promisify } from 'util'
 
@@ -52,7 +51,8 @@ export async function email(to, subject, text) {
  * @param {string} message    Max 140 characters
  */
 export async function sms(phone, msg) {
-  await sns.sms(phone, msg)
+  const aws = await import('/repo/aws.js')
+  await aws.sns.sms(phone, msg)
 }
 
 export async function popup(title, msg) {
