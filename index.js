@@ -1,7 +1,11 @@
 import * as a1_beep from 'a1-beep'
 import fetch from 'node-fetch'
 import { send } from './email.js'
-import { sns } from '../repo/aws.js'
+import { sns } from '/repo/aws.js'
+import { execFile as execFileCallback } from 'child_process'
+import { promisify } from 'util'
+
+const execFile = promisify(execFileCallback)
 
 /**
  * Beep sound in the current computer
@@ -49,4 +53,10 @@ export async function email(to, subject, text) {
  */
 export async function sms(phone, msg) {
   await sns.sms(phone, msg)
+}
+
+export async function popup(title, msg) {
+  const { out, err } = await execFile('notify-send', [title, msg])
+  if (err) throw err
+  return out
 }
