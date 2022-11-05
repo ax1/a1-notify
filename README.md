@@ -2,7 +2,7 @@
 
 Use different techniques to notify an event (alarm, trigger).
 
-Available methods: beep, email, web push notification, sms to phone.
+Available methods: beep, email, web push notification, sms to phone, or desktop pop-up.
 
 ## Email special case
 
