@@ -8,4 +8,4 @@ await notify.email('angel.rego@tecnalia.com', 'comedor', 'ocupado').catch(consol
 // notify.sms('1235424', 'pruebas').catch(console.error) disabled because sms charges 0.06 per message
 
 // notify.email()
-// notify.rest()
+// notify.post()

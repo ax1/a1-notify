@@ -31,7 +31,7 @@ notify.beep()
 ## API
 
 - **beep()**: Beep sound in the current computer.
-- **async rest(url, message)**: Send an HTTP POST message.
+- **async post(url, message)**: Send an HTTP POST message.
 - **async push(url, message, token?)**: Send a web push notification. Token is optional for restricted push messages.
 - **async email(to, subject, message)**: Send an email message. process.env.EMAIL_USER and process.env.EMAIL_APP_PW must be set before sending. Message can be either text or html.
 - **async sms(phone, message)**: Send an SMS (requires AWS account and whitelisted or arbitrary SMS must be selected in the AWS console).

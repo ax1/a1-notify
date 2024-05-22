@@ -1,5 +1,4 @@
 import * as a1_beep from 'a1-beep'
-import fetch from 'node-fetch'
 import { send } from './email.js'
 import { execFile as execFileCallback } from 'child_process'
 import { promisify } from 'util'
@@ -12,12 +11,12 @@ const execFile = promisify(execFileCallback)
 export function beep() { return a1_beep.beep() }
 
 /**
- * Send generic REST message
+ * Send generic REST POST message
  * @param {string} url
  * @param {string} message 
  * @param {string} token?
  */
-export async function rest(url, message, token) {
+export async function post(url, message, token) {
   const payload = { title: 'a1-notify', message }
   const res = await fetch(url, { method: 'post', body: JSON.stringify(payload) })
   if (!res.ok) throw res
@@ -26,13 +25,13 @@ export async function rest(url, message, token) {
 
 /**
  * Send a web push notification
- * @param {String} url                the endpoint of the service
+ * @param {String} url                the endpoint of the service (e.g., http://pwa/notify)
  * @param {String | Object} message   text or { title, message }
  * @param {String} token?             [optional] for restricted messages
  */
 export async function push(url, message, token) {
   if (!message) throw Error('message is undefined. Check if method call is url, message ,token?')
-  await rest(url, message, token)
+  await post(url, message, token)
 }
 
 
