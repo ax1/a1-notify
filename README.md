@@ -13,7 +13,7 @@ https://nodemailer.com/about/
 https://support.google.com/accounts/answer/185833?hl=en
 
 Steps:
-- enable 2fa in the account
+- enable 2FA in the account
 - create an app password (go to google account and type "app password" in the search bar)
 - add env variables EMAIL_USER="aaa@bb.com" EMAIL_APP_PW="asdadadad"
 
